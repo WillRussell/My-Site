@@ -1,0 +1,51 @@
+@import url('../fonts/Roboto.css');
+
+body {
+    background: #FAFAFA;
+    font-family: Roboto !important;
+}
+
+.header-icon img {
+    height: 120px;
+}
+
+.name {
+    padding-left: 12px;
+}
+
+.page-header h1 {
+    color: rgba(0, 0, 0, .87);
+    font-weight: 500;
+    margin: 0px;
+}
+
+.page-header p {
+    color: rgba(0, 0, 0, .62);
+    margin: 0px;
+    margin-top: 2px;
+}
+
+.divider {
+    margin: 0px 8px;
+}
+
+.list {
+    padding-top: 8px;
+}
+
+.src-btn {
+    padding: 0px 6px;
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    .header-icon {
+        display: none;
+    }
+
+    .content {
+        margin: 0px;
+    }
+}

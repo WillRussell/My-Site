@@ -1,0 +1,33 @@
+<div layout="column" flex layout-margin>
+
+	<div layout="row" layout-align="start center" layout-padding flex>
+
+		<div class="page-header">
+			<h1>Skills</h1>
+			<p>Web Technologies I Like to Use</p>
+		</div>
+
+	</div>
+
+
+	<md-divider class="divider"></md-divider>
+
+
+	<md-tabs md-dynamic-height flex>
+
+		<div ng-repeat="skill in vm.skills">
+			<md-tab label="{{skill.type}}">
+
+				<div class="list">
+					<ul ng-repeat="item in skill.collection">
+						<li>{{::item}}</li>
+					</ul>
+				</div>
+
+			</md-tab>
+		</div>
+
+	</md-tabs>
+
+
+</div>

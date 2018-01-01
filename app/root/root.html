@@ -1,0 +1,57 @@
+<!-- Navbar -->
+<md-toolbar layout="row" class="navbar md-whiteframe-z4">
+	<div class="md-toolbar-tools">
+
+		<md-icon>code</md-icon>
+		<span class="name">Will Russell</span>
+
+		<!-- Clock -->
+		<span flex></span>
+		<span hide show-gt-sm class="nav-time">{{time || '--'}}</span>
+
+		<!-- Sidebar Toggle  -->
+		<md-button ng-click="toggleSidenav('left')" hide-gt-sm class="nav-menu">
+			<md-icon>menu</md-icon>
+		</md-button>
+
+	</div>
+</md-toolbar>
+
+
+
+
+<!-- Page Container -->
+<div layout="row" flex>
+
+
+	<!-- Sidenav (collapses on small devices) -->
+	<md-sidenav layout="column" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="2">
+		<md-list>
+
+			<md-subheader class="md-no-sticky">Navigation</md-subheader>
+
+			<div ng-repeat="link in sidenav_links">
+
+				<md-list-item ui-sref-active="active" class="item" ui-sref="{{link.state}}">
+					<div class="inset">
+						<md-icon>{{link.icon}}</md-icon>
+					</div>
+					<p class="md-body-2" flex>{{link.name}}</p>
+					<md-icon class="chevron-icon">chevron_right</md-icon>
+				</md-list-item>
+
+			</div>
+
+		</md-list>
+	</md-sidenav>
+
+
+
+
+	<!-- Dynamic Views -->
+	<md-content layout="column" flex>
+		<div ui-view="page"></div>
+	</md-content>
+
+
+</div>
