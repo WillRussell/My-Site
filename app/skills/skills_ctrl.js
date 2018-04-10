@@ -23,9 +23,10 @@
     }, {
       type: 'Back-end',
       collection: [
-        'Node.js',
+        'Node.js (ES6)',
         'Express.js',
-        'AWS Lamda'
+        'AWS Lamda',
+        'Mongo DB'
       ]
     }, {
       type: 'Dev-Ops',
